@@ -12,8 +12,8 @@ import static org.junit.Assert.*;
 public class ShoppingCartTest {
 
     Meat meat = new Meat(5, 100);
-    Apple applesRed = new Apple(10, 50, Colour.red);
-    Apple applesGreen = new Apple(8, 60, Colour.green);
+    Apple applesRed = new Apple(10, 50, Colour.RED);
+    Apple applesGreen = new Apple(8, 60, Colour.GREEN);
 
     Food[] foods = {meat, applesRed, applesGreen};
     ShoppingCart cart = new ShoppingCart(foods);
