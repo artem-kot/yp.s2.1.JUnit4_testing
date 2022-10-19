@@ -8,4 +8,8 @@ public class Meat extends Food{
         this.isVegetarian = false;
     }
 
+    @Override
+    public double getDiscount() {
+        return 0;
+    }
 }
