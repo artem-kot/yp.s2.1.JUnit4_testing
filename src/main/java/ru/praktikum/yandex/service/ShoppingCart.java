@@ -1,6 +1,5 @@
 package ru.praktikum.yandex.service;
 
-import ru.praktikum.yandex.model.Apple;
 import ru.praktikum.yandex.model.Food;
 
 public class ShoppingCart {
@@ -10,25 +9,27 @@ public class ShoppingCart {
         this.foods = foods;
     }
 
-    double totalPriceWithoutDiscount(){
+    public double totalPriceWithoutDiscount(){
         double sum = 0;
         for (Food food : foods) {
-            sum += food.getPrice();
+            sum += food.getAmount() * food.getPrice();
         }
         return sum;
     }
 
-    double totalPriceWithDiscount(){
+    public double totalPriceWithDiscount(){
         double sum = 0;
-        //code
+        for (Food food : foods) {
+            sum += food.getAmount() * food.getDiscountedPrice();
+        }
         return sum;
     }
 
-    double totalVegetarianPriceWithoutDiscount(){
+    public double totalVegetarianPriceWithoutDiscount(){
         double sum = 0;
         for (Food food : foods){
             if(food.isVegetarian()){
-                sum += food.getPrice();
+                sum += food.getAmount() * food.getPrice();
             }
         }
         return sum;
