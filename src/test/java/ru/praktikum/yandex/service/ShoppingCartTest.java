@@ -9,11 +9,8 @@ import ru.praktikum.yandex.model.constants.Colour;
 import static org.junit.Assert.*;
 
 
-public class ShoppingCartTest {
+public class ShoppingCartTest extends BaseTestData{
 
-    private final double TEST_DATA1_TOTAL_PRICE = 1480;
-    private final double TEST_DATA2_TOTAL_PRICE = 1180;
-    private final double TEST_DATA3_TOTAL_PRICE = 980;
     Meat meat = new Meat(5, 100);
     Apple applesRed = new Apple(10, 50, Colour.RED);
     Apple applesGreen = new Apple(8, 60, Colour.GREEN);
